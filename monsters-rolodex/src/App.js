@@ -4,14 +4,13 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
-
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
-      name: {firstname: 'Sachin', lastname: 'Kumar'},
-      company: 'ztm'
-    }
+      name: { firstname: "Sachin", lastname: "Kumar" },
+      company: "ztm",
+    };
   }
 
   render() {
@@ -20,12 +19,23 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hi {this.state.name.firstname} {this.state.name.lastname}, I work at {this.state.company}
+            Hi {this.state.name.firstname} {this.state.name.lastname}, I work at{" "}
+            {this.state.company}
           </p>
-          <button onClick={() => {
-            this.setState({name : {firstname: 'Satyam', lastname: 'Kumar'}});
-            console.log(this.state);
-          }}>
+          <button
+            onClick={() => {
+              this.setState(
+                () => {
+                  return {
+                    name: { firstname: "Satyam", lastname: "Kumar" },
+                  };
+                },
+                () => {
+                  console.log(this.state);
+                },
+              );
+            }}
+          >
             Change Name
           </button>
         </header>
