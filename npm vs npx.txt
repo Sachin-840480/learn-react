@@ -1,0 +1,7 @@
+# Difference Between npm and npx.
+
+1. NPM:- npm is a package manager used to install, update, and manage dependencies, while npx is a package runner used to execute packages directly without permanently installing them
+
+2. NPX:- npx is a npm package runner (x probably stands for eXecute). One common way to use npx is to download and run a package temporarily or for trials.
+        
+    Ex:    create-react-app is an npm package that is expected to be run only once in a project's lifecycle. Hence, it is preferred to use npx to install and run it in a single step.
